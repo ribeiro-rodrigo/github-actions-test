@@ -1,0 +1,3 @@
+curl -v -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" -H  "Authorization: Bearer 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" -X POST https://api.github.com/repos/ribeiro-rodrigo/github-actions-test/dispatches -d '{"event_type":"build"}' 
+
+curl -v -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" -H  "Authorization: Bearer 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" -X POST https://api.github.com/repos/ribeiro-rodrigo/github-actions-test/dispatches -d '{"event_type":"build", "client_payload":{"env":"production" }}'
