@@ -6,14 +6,17 @@ on: [pull_request]
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
     steps:
       - name: echo a string 
         run: echo "Hello World"
+        continue-on-error: true 
       - name: multiline script
         run: | 
           node -v 
           npm -v 
       - name: python command
+        timeout-minutes: 20
         run: | 
           import platform 
           print(platform.processor())
